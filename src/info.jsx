@@ -1,9 +1,9 @@
-export default function Info(){
+export default function Info({formdata}){
     return (
         <div className="myinfo">
-            <img src="./images/myphoto.jpg" className="photo" />
-            <h1>Adiri Oghenetega</h1>
-            <h4>Frontend Developer</h4>
+            <img src={formdata.image} className="photo" />
+            <h1>{formdata.firstname +" "+formdata.lastname}</h1>
+            <h4>{formdata.occupation}</h4>
         </div>
     )
 }

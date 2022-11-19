@@ -1,10 +1,12 @@
-export default function Footer(){
+import { AiOutlineTwitter,AiFillFacebook,AiFillInstagram,AiFillGithub } from "react-icons/ai";
+
+export default function Footer({formdata}){
     return (
         <footer>
-            <img src="./images/Twitter_Icon.png" className="tweet" />
-            <img src="./images/Facebook_Icon.png" className="fb" />
-            <img src="./images/Instagram_Icon.png" className="ig" />
-            <img src="./images/GitHub_Icon.png" className="git" />
+        <a href={formdata.twitter} target="_blank"><AiOutlineTwitter size="25px" className="tweet" /></a>
+        <a href={formdata.facebook} target="_blank"><AiFillFacebook size="25px" className="fb" /></a>
+        <a href={formdata.instagram} target="_blank"><AiFillInstagram size="25px" className="ig" /></a>
+        <a href={formdata.github} target="_blank"><AiFillGithub size="25px" className="git" /></a>
         </footer>
     )
 }
